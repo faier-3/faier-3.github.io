@@ -1,0 +1,18 @@
+.post-button {
+  margin-top: 1.5em;
+
+  .btn {
+    color: rgb(150, 78, 78);
+    font-size: 0.9em;
+    background: rgba(255, 255, 255, 0);
+    border-radius: $read-more-border-radius;
+    line-height: 2.3;
+  }
+  .btn:hover {
+    @extend %btn-hover;
+  }
+  .fa-fw {
+    width: (18em / 14);
+    text-align: left;
+  }
+}

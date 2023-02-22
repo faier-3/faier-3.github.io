@@ -1,0 +1,94 @@
+.container .main-inner {
+  width: $main-desktop;
+
+  @include tablet() {
+    width: auto;
+  }
+  @include mobile() {
+    width: auto;
+  }
+}
+
+.content-wrap {
+  box-sizing: border-box;
+  padding: $content-desktop-padding;
+  background: #ffffff;
+  min-height: 900px;
+  box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
+
+  @include tablet() {
+    width: 100%;
+    padding: 20px;
+    border-radius: initial;
+  }
+  @include mobile() {
+    width: 100%;
+    padding: 20px;
+    min-height: auto;
+    border-radius: initial;
+  }
+}
+
+.content-wrap-index {
+  box-sizing: border-box;
+  padding: $content-desktop-padding;
+  background: #ffffffcb;
+  min-height: 900px;
+  box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
+
+  @include tablet() {
+    width: 100%;
+    padding: 20px;
+    border-radius: initial;
+  }
+  @include mobile() {
+    width: 100%;
+    padding: 20px;
+    min-height: auto;
+    border-radius: initial;
+  }
+}
+
+.sidebar {
+  position: static;
+  width: 100%;
+  background: $body-bg-color;
+  margin-top: 32px !important;
+
+  @include tablet() {
+    display: none;
+  }
+  @include mobile() {
+    display: none;
+  }
+}
+
+.sidebar-toggle { display: none; }
+
+
+.footer-inner {
+  width: $main-desktop;
+  padding-left: 260px;
+
+  @include tablet() {
+    width: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  @include mobile() {
+    width: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+
+.sidebar-position-right {
+  .footer-inner {
+    padding-left: 0;
+    padding-right: 260px;
+  }
+}

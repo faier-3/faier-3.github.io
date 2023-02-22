@@ -1,0 +1,301 @@
+// https://github.com/chriskempson/tomorrow-theme
+@mixin partial_highlight {
+
+
+$highlight_theme : jekyll-config("highlight_theme");
+
+
+
+
+@if $highlight_theme == "night" {
+  $highlight-background   : #1d1f21 !global;
+  $highlight-current-line : #282a2e !global;
+  $highlight-selection    : #373b41 !global;
+  $highlight-foreground   : #c5c8c6 !global;
+  $highlight-comment      : #969896 !global;
+  $highlight-red          : #cc6666 !global;
+  $highlight-orange       : #de935f !global;
+  $highlight-yellow       : #f0c674 !global;
+  $highlight-green        : #b5bd68 !global;
+  $highlight-aqua         : #8abeb7 !global;
+  $highlight-blue         : #81a2be !global;
+  $highlight-purple       : #b294bb !global;
+  $highlight-gutter       : (
+    color: scale-color($highlight-background, $lightness: 50%),
+    bg-color: scale-color($highlight-background, $lightness: -100%)
+  ) !global;
+}
+
+@else if $highlight_theme == "night eighties" {
+  $highlight-background   : #2d2d2d !global;
+  $highlight-current-line : #393939 !global;
+  $highlight-selection    : #515151 !global;
+  $highlight-foreground   : #cccccc !global;
+  $highlight-comment      : #999999 !global;
+  $highlight-red          : #f2777a !global;
+  $highlight-orange       : #f99157 !global;
+  $highlight-yellow       : #ffcc66 !global;
+  $highlight-green        : #99cc99 !global;
+  $highlight-aqua         : #66cccc !global;
+  $highlight-blue         : #6699cc !global;
+  $highlight-purple       : #cc99cc !global;
+  $highlight-gutter       : (
+    color: $highlight-comment,
+    bg-color: scale-color($highlight-background, $lightness: -40%)
+  ) !global;
+}
+
+@else if $highlight_theme == "night blue" {
+  $highlight-background   : #002451 !global;
+  $highlight-current-line : #00346e !global;
+  $highlight-selection    : #003f8e !global;
+  $highlight-foreground   : #ffffff !global;
+  $highlight-comment      : #7285b7 !global;
+  $highlight-red          : #ff9da4 !global;
+  $highlight-orange       : #ffc58f !global;
+  $highlight-yellow       : #ffeead !global;
+  $highlight-green        : #d1f1a9 !global;
+  $highlight-aqua         : #99ffff !global;
+  $highlight-blue         : #bbdaff !global;
+  $highlight-purple       : #ebbbff !global;
+  $highlight-gutter       : (
+    color: $highlight-comment,
+    bg-color: scale-color($highlight-background, $lightness: -60%)
+  ) !global;
+}
+@else if $highlight_theme == "night bright" {
+  $highlight-background   : #000000 !global;
+  $highlight-current-line : #2a2a2a !global;
+  $highlight-selection    : #424242 !global;
+  $highlight-foreground   : #eaeaea !global;
+  $highlight-comment      : #969896 !global;
+  $highlight-red          : #d54e53 !global;
+  $highlight-orange       : #e78c45 !global;
+  $highlight-yellow       : #e7c547 !global;
+  $highlight-green        : #b9ca4a !global;
+  $highlight-aqua         : #70c0b1 !global;
+  $highlight-blue         : #7aa6da !global;
+  $highlight-purple       : #c397d8 !global;
+  $highlight-gutter       : (
+    color: scale-color($highlight-background, $lightness: 40%),
+    bg-color: scale-color($highlight-background, $lightness: 16%)
+  ) !global;
+}
+// $highlight_theme == "normal"
+@else  {
+  $highlight-background   : #f7f7f7 !global;
+  $highlight-current-line : #efefef !global;
+  $highlight-selection    : #d6d6d6 !global;
+  $highlight-foreground   : #4d4d4c !global;
+  $highlight-comment      : #8e908c !global;
+  $highlight-red          : #c82829 !global;
+  $highlight-orange       : #f5871f !global;
+  $highlight-yellow       : #eab700 !global;
+  $highlight-green        : #718c00 !global;
+  $highlight-aqua         : #3e999f !global;
+  $highlight-blue         : #4271ae !global;
+  $highlight-purple       : #8959a8 !global;
+  $highlight-gutter       : (
+    color: #869194,
+    bg-color: #eff2f3
+  ) !global;
+}
+
+// diff
+
+$highlight_theme : jekyll-config("highlight_theme");
+
+@if $highlight_theme == "normal" {
+  $highlight-deletion     : #fdd !global;
+  $highlight-addition     : #dfd !global;
+}
+@else {
+  $highlight-deletion     : #008000 !global;
+  $highlight-addition     : #800000 !global;
+}
+
+
+// Placeholder: $code-block
+%code-block {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0;
+  font-size: $code-font-size;
+  color: $highlight-foreground;
+  background: $highlight-background;
+  line-height: $line-height-code-block;
+}
+
+pre, code { font-family: $code-font-family; }
+
+code {
+  padding: 2px 4px;
+  word-wrap: break-word;
+  color: $code-foreground;
+  background: $code-background;
+  border-radius: $code-border-radius;
+  font-size: $code-font-size;
+}
+
+pre {
+  @extend %code-block;
+
+  code {
+    padding: 0;
+    color: $highlight-foreground;
+    background: none;
+    text-shadow: none;
+  }
+}
+
+.highlight {
+  @extend %code-block;
+  border-radius: 1px;
+
+  pre {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  & > pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $highlight-background;
+  }
+
+  table {
+    margin: -10px;
+    width: auto;
+    border: none;
+  }
+
+  td {
+    border: none;
+    padding: 0;
+  }
+
+  figcaption {
+    @include clearfix();
+    font-size: 1em;
+    color: $highlight-foreground;
+    line-height: 1em;
+    margin-bottom: 1em;
+
+    a {
+      float: right;
+      color: $highlight-foreground;
+
+      &:hover { border-bottom-color: $highlight-foreground; }
+    }
+  }
+
+  .gutter pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: map-get($highlight-gutter, color);
+    text-align: right;
+    background-color: map-get($highlight-gutter, bg-color);
+  }
+
+  .code pre {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $highlight-background;
+  }
+
+  .line { height: 20px; }
+}
+
+
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.gist table {
+  width: auto;
+
+  td { border: none; }
+}
+
+pre.highlight { padding: 10px; }
+
+// For diff highlight
+pre .deletion { background: $highlight-deletion; }
+pre .addition { background: $highlight-addition; }
+pre .meta     { color: $highlight-purple; }
+
+pre {
+
+  .c, .cm, .cp, .cs { color: $highlight-comment; }
+  .c1 
+  {
+    color: #e29e9e;
+    font-style: italic;
+  }
+  .nv, .vc, .vg, .vi,
+  .na,
+  .nt,
+  .sr,
+  .ruby .constant,
+  .xml .tag .title,
+  .xml .pi,
+  .xml .doctype,
+  .html .doctype,
+  .css .id,
+  .css .class,
+  .css .pseudo {
+    color: $highlight-red;
+  }
+
+  .m, .mf, .mh, .mi, .il, .mo, .mx, .mb,
+  .cp,
+  .nb, .bp,
+  .l, .ld,
+  .params,
+  .kc,
+  .gp {
+    color: $highlight-orange;
+  }
+
+  .ruby .class .title,
+  .css .rules .attribute,
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1, .ss,
+  .value,
+  .inheritance,
+  .header,
+  .ruby .symbol,
+  .xml .cdata,
+  .special,
+  .m, .mf, .mh, .mi, .il, .mo, .mx, .mb,
+  .formula {
+    color: $highlight-green;
+  }
+
+  .nc, .nf,
+  .css .hexcolor {
+    color: $highlight-aqua;
+  }
+
+  .nf,
+  .python .decorator,
+  .python .title,
+  .ruby .function .title,
+  .ruby .title .keyword,
+  .perl .sub,
+  .javascript .title,
+  .coffeescript .title {
+    color: $highlight-blue;
+  }
+
+  .k, .kd, .kn, .kp, .kr, .kt,
+  .javascript .function {
+    color: $highlight-purple;
+  }
+
+}
+}
