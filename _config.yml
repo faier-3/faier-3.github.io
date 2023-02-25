@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: WONDERWALL
-subtitle: Some Records
-description: ~Welcome to My Blog~
-author: ORANGE
+title: MY ALGORITHM HOMEWORK
+subtitle: just homework
+description: ~Welcome to My Garden~
+author: Faier
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 # 日期显示格式 年(四位)-月份（01-12）-月内中的一天（0-31）-星期（0-6）（星期天为星期的开始）
@@ -169,7 +169,7 @@ scheme: Pisces
 #--------------------------------------------------------------------------
 # Backgrounds
 # -------------firework:---------------------
-background: bg-i1.JPG
+background: bg-i2.JPG
 # ----------------sky:-----------------------
 # background: bg-i2.JPG
 # ----------------lake:----------------------
@@ -433,7 +433,7 @@ wildfire:
   wilddog: # your wilddog config goes here ↓
     siteId:
   # other configs
-  theme: light # or dark
+  theme: dark # or dark
   locale: en # or other locales, e.g. zh-CN
   defaultAvatarURL: 
 # Any question? 
