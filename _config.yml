@@ -128,7 +128,6 @@ menu:
   archives: /archives/
   tags: /tags/
   travel: /travel/
-  friend link: /friends/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -562,12 +561,12 @@ busuanzi_count:
   enable: true
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>你是clovy第
+  site_uv_header: <i class="fa fa-user"></i>你是faier第
   site_uv_footer: 个小伙伴
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>被偷偷看了
-  site_pv_footer: 次,好刺激!
+  site_pv_header: <i class="fa fa-eye"></i>被访问了
+  site_pv_footer: 次XD
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-spinner fa-spin"></i>
