@@ -1,5 +1,5 @@
-https://faier-3.github.io/about/index.html
-https://faier-3.github.io/categories/index.html
-https://faier-3.github.io/2023/09/06/My-New-Post/
-https://faier-3.github.io/2023/09/06/hello-world/
-https://faier-3.github.io/
+http://example.com/about/index.html
+http://example.com/categories/index.html
+http://example.com/2023/09/06/My-New-Post/
+http://example.com/2023/09/06/hello-world/
+http://example.com/
