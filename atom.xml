@@ -3,11 +3,11 @@
   <title>Kpusal</title>
   
   
-  <link href="http://faier-3.github.io/project/atom.xml" rel="self"/>
+  <link href="https://faier-3.github.io/atom.xml" rel="self"/>
   
-  <link href="http://faier-3.github.io/project/"/>
+  <link href="https://faier-3.github.io/"/>
   <updated>2023-09-06T06:08:46.582Z</updated>
-  <id>http://faier-3.github.io/project/</id>
+  <id>https://faier-3.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>My New Post</title>
-    <link href="http://faier-3.github.io/project/2023/09/06/My-New-Post/"/>
-    <id>http://faier-3.github.io/project/2023/09/06/My-New-Post/</id>
+    <link href="https://faier-3.github.io/2023/09/06/My-New-Post/"/>
+    <id>https://faier-3.github.io/2023/09/06/My-New-Post/</id>
     <published>2023-09-06T06:05:18.000Z</published>
     <updated>2023-09-06T06:08:46.582Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://faier-3.github.io/project/2023/09/06/hello-world/"/>
-    <id>http://faier-3.github.io/project/2023/09/06/hello-world/</id>
+    <link href="https://faier-3.github.io/2023/09/06/hello-world/"/>
+    <id>https://faier-3.github.io/2023/09/06/hello-world/</id>
     <published>2023-09-06T03:40:37.418Z</published>
     <updated>2023-09-06T03:40:37.418Z</updated>
     
